@@ -15,6 +15,6 @@ Use pgAdmin application and database backup 'trelloDB' for create database.
 
 # For run server
 
-npm start
+`npm start`
 
 Then open a browser: http://localhost:3000.
