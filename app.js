@@ -17,7 +17,12 @@ app.use(boards);
 
 
 app.use(function (err, req, res, next) {
-  res.json(err.message);
+  res.status(error.status || 500);
+  res.json({
+    error: {
+      message: error.message
+    }
+  });
 });
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'));

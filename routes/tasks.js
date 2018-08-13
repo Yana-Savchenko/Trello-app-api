@@ -42,7 +42,10 @@ router.put('/task', auth, (req, res, next) => {
     req.body.map(function (task) {
         sequelize.query(`UPDATE tasks SET list = :list, position = :position WHERE id = :id`, {replacements: { id: task.id, list: task.list, position: task.position  }, type: sequelize.QueryTypes.SELECT});
     } )
-    res.json({ message: 'ok upd' });
+    res.json({ message: 'ok upd' })
+    .catch((error) => {
+        next(error);
+    });
 
 });
 
