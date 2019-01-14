@@ -1,6 +1,6 @@
 const development = {
     database: 'trello',
-    username: 'nodejs',
+    username: 'yana',
     password: '1234',
     host: 'localhost',
     port: '5432',
